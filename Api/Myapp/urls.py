@@ -11,3 +11,6 @@ urlpatterns = [
     url(r'^hello-view/', views.HelloApiView.as_view()),
     url(r'', include(router.urls))
 ]
+router.register('profile', views.UserProfileViewSet)
+router.register('login', views.LoginViewSet, basename='login')
+router.register('feed', views.UserProfileFeedViewSet)
